@@ -66,4 +66,4 @@ function playGame() {
 }
 
 playGame();
-console.count()
+
