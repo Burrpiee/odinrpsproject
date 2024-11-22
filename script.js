@@ -49,7 +49,6 @@ function playRound(humanChoice, computerChoice){
 
 function playGame() {
     for (let i = 0; i < 5 ; i++){
-        getHumanChoice();
         let humanSelection = getHumanChoice();
         let computerSelection = getComputerChoice();
         playRound(humanSelection, computerSelection);
@@ -64,8 +63,7 @@ function playGame() {
     else{
         console.log("You have tied.")
     }
-    
 }
 
 playGame();
-
+console.count()
