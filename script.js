@@ -12,8 +12,8 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let x = prompt("key in rock, paper, or scissors.");
-    return x;
+    let humanPrompt = prompt("key in rock, paper, or scissors.");
+    return humanPrompt;
 }
 
 let humanScore = 0;
@@ -40,11 +40,32 @@ function playRound(humanChoice, computerChoice){
             console.log("You lost!");
             computerScore++;
             break; 
-    }
+        default:
+            break;
 
+    }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
+function playGame() {
+    for (let i = 0; i < 5 ; i++){
+        getHumanChoice();
+        let humanSelection = getHumanChoice();
+        let computerSelection = getComputerChoice();
+        playRound(humanSelection, computerSelection);
+    }
+
+    if (computerScore > humanScore){
+        console.log("You have lost.");
+    }
+    else if (humanScore > computerScore){
+        console.log("You have won!");
+    }
+    else{
+        console.log("You have tied.")
+    }
+    
+}
+
+playGame();
+
